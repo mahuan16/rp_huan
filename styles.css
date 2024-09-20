@@ -10,15 +10,15 @@
 }
 
 .authors{
-    background-color: #dbe3e7;
+    background-color: #84bc8d;
 }
 
 .body{
-    background-color: rgb(90, 92, 92);
+    background-color: rgb(166, 181, 166);
 }
 
 .footer{
-    background-color: #023E8A;
+    background-color: #08461b;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -48,7 +48,7 @@
 }
 
 .procedure{
-    background-color: #dbe3e7;
+    background-color: rgb(166, 181, 166);
     padding: 1px;
 }
 
