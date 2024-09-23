@@ -6,27 +6,27 @@
 }
 
 .about-team{
-    color:rgb(82, 81, 81)
+    color:#FFECD1;
 }
 
 .authors{
-    background-color: #84bc8d;
+    background-color: #FFECD1;
 }
 
 .body{
-    background-color: rgb(166, 181, 166);
+    background-color: #15616D;
 }
 
 .footer{
-    background-color: #08461b;
+    background-color: #001524;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
-    color: #FFFFFF;
+    color: #FFECD1;
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #023E8A;
+    background-color: #001524;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -36,7 +36,7 @@
 }
 
 .overview{
-    background-color: #dbe3e7;
+    background-color: #FFECD1;
 }
 
 .ovPadLeft{
@@ -48,14 +48,23 @@
 }
 
 .procedure{
-    background-color: rgb(166, 181, 166);
+    background-color: #FFECD1;
     padding: 1px;
 }
 
 .showcase{
-    background-color: #8fa3ab; /*#0096c7*/
+    background-color: #FFECD1; /*#0096c7*/
 }
 
+.method{
+    width:250px;
+    height:250px;
+    align-content: center;
+}
+
+.table-secondary{
+
+}
 /* ----------------- ID CSS ----------------- */
 
 /* -----------------Underline Animation CSS -----------------*/
@@ -73,7 +82,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #eae6e6;
+    background-color: rgb(215, 207, 207);
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
