@@ -35,8 +35,14 @@
     margin-right: 10px;
 }
 
+hr{
+    border: none;
+    height: 10px;
+    background-color: #15616D; 
+}
+
 .overview{
-    background-color: #FFECD1;
+    background-color: #f2ede5;
 }
 
 .ovPadLeft{
@@ -48,12 +54,12 @@
 }
 
 .procedure{
-    background-color: #FFECD1;
+    background-color: #f2ede5;
     padding: 1px;
 }
 
 .showcase{
-    background-color: #FFECD1; /*#0096c7*/
+    background-color: #f2ede5; /*#0096c7*/
 }
 
 .method{
@@ -62,8 +68,19 @@
     align-content: center;
 }
 
-.table-secondary{
+.table{
+    color: #15616D;
+    border: thick;
+    border-color:#15616D;
+}
 
+.table-second{
+    background-color: #cfc1ac;
+}
+
+.table-main{
+    background-color: #15616d73;
+    color:#15616D;
 }
 /* ----------------- ID CSS ----------------- */
 
