@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* ----------------- Class CSS ----------------- */
 
 .about{
@@ -6,11 +8,16 @@
 }
 
 .about-team{
-    color:#FFECD1;
+    color:#15616D;
 }
 
 .authors{
-    background-color: #FFECD1;
+    background-color:#f2ede5;
+}
+
+.navbar{
+    background-color: #001524;
+    color:#FFECD1;
 }
 
 .body{
@@ -19,6 +26,7 @@
 
 .footer{
     background-color: #001524;
+    color:#FFECD1;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -26,7 +34,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #001524;
+    background-color:#15616D;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -35,14 +43,9 @@
     margin-right: 10px;
 }
 
-hr{
-    border: none;
-    height: 10px;
-    background-color: #15616D; 
-}
-
 .overview{
     background-color: #f2ede5;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .ovPadLeft{
@@ -70,8 +73,9 @@ hr{
 
 .table{
     color: #15616D;
-    border: thick;
-    border-color:#15616D;
+    border-style: solid;
+    border-width: medium;
+    border-color:#15616d73;
 }
 
 .table-second{
@@ -82,7 +86,28 @@ hr{
     background-color: #15616d73;
     color:#15616D;
 }
+
+.display-4, .ovPadLeft{
+    color:#001524;
+}
+
+.header-box{
+    background-color:#ffffff85;
+}
+
 /* ----------------- ID CSS ----------------- */
+#finalTest{
+    width: 175px;
+}
+
+#title{
+    font-size: 25px;
+    color:#685c4a;
+}
+
+#info{
+    color:#685c4a;
+}
 
 /* -----------------Underline Animation CSS -----------------*/
 .hover-underline-animation {
@@ -107,4 +132,32 @@ hr{
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+/* ----------------- Other ----------------- */
+
+hr{
+    border: none;
+    height: 10px;
+    background-color: #15616D; 
+}
+
+td, th{
+    border-style: solid;
+    border-width: medium;
+    border-color:#15616d73;
+}
+
+img{
+    border-style: solid;
+    border-width: thick;
+    border-color: #ffffff85
+}
+
+header{
+    background-image: url(img/planaria-img.jpg);
+    background-size: 1100px;
+    background-position: center;
+    height:250px;
+    padding: 25px;
 }
