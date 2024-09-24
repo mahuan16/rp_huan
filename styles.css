@@ -4,7 +4,7 @@
 
 .about{
     width:400px;
-    margin: auto;
+    margin: 0px auto;
 }
 
 .about-team{
@@ -16,7 +16,11 @@
 }
 
 .navbar{
-    background-color: #001524;
+    color:#FFECD1;
+    background-color:#083a41;
+}
+
+.nav-link{
     color:#FFECD1;
 }
 
@@ -25,7 +29,7 @@
 }
 
 .footer{
-    background-color: #001524;
+    background-color:#083a41;
     color:#FFECD1;
 }
 
@@ -34,7 +38,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color:#15616D;
+    background-color:#083a41;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -91,10 +95,6 @@
     color:#001524;
 }
 
-.header-box{
-    background-color:#ffffff85;
-}
-
 /* ----------------- ID CSS ----------------- */
 #finalTest{
     width: 175px;
@@ -113,8 +113,14 @@
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    /*color: #0087ca;*/
+    color: #f2ede5;
   }
+
+.header-box:hover{
+    background-color:#15616D;
+    height:250px;
+    background-size: 1100px;
+}
   
 .hover-underline-animation:after {
     content: '';
@@ -154,10 +160,22 @@ img{
     border-color: #ffffff85
 }
 
+/*
 header{
     background-image: url(img/planaria-img.jpg);
     background-size: 1100px;
     background-position: center;
     height:250px;
-    padding: 25px;
+    padding:25px;
+    transition: all 1s ease;
+}
+*/
+.header-box{
+    background-image: url(img/planaria-img.jpg);
+    background-size: 1100px;
+    background-position: center;
+    background-color:#15616D;
+    height:250px;
+    padding:25px;
+    transition: all 1s linear 100ms;
 }
