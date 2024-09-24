@@ -7,7 +7,7 @@
     margin: 0px auto;
 }
 
-.about-team{
+.about-team, .procedure-text{
     color:#15616D;
 }
 
@@ -91,18 +91,19 @@
     color:#15616D;
 }
 
-.display-4, .ovPadLeft{
+.ovPadLeft{
     color:#001524;
 }
 
-/* ----------------- ID CSS ----------------- */
-#finalTest{
-    width: 175px;
+.card-margin{
+    margin-bottom: 25px;
 }
+
+/* ----------------- ID CSS ----------------- */
 
 #title{
     font-size: 25px;
-    color:#685c4a;
+    color:#cfc1ac;
 }
 
 #info{
@@ -117,9 +118,10 @@
   }
 
 .header-box:hover{
-    background-color:#15616D;
-    height:250px;
-    background-size: 1100px;
+    background-color:#15616dc8;
+    mix-blend-mode: multiply;
+    background-size: 1500px;
+    background-position: center;
 }
   
 .hover-underline-animation:after {
@@ -160,22 +162,23 @@ img{
     border-color: #ffffff85
 }
 
-/*
+
 header{
     background-image: url(img/planaria-img.jpg);
     background-size: 1100px;
     background-position: center;
     height:250px;
-    padding:25px;
-    transition: all 1s ease;
+    color:#cfc1ac;
 }
-*/
+
 .header-box{
-    background-image: url(img/planaria-img.jpg);
-    background-size: 1100px;
+    background-size: 1200px;
     background-position: center;
-    background-color:#15616D;
     height:250px;
-    padding:25px;
-    transition: all 1s linear 100ms;
+    width: 100%;
+    background-color: #083a4146;
+    mix-blend-mode: multiply;
+    /*-webkit-transition: background-image 0.2s ease-in-out 1s 250ms;*/
+    transition: background-color 1s ease 50ms;
+    padding: 50px;
 }
