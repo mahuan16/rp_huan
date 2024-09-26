@@ -92,22 +92,59 @@
 }
 
 .ovPadLeft{
-    color:#001524;
+    color:#083a41;
 }
 
 .card-margin{
     margin-bottom: 25px;
 }
 
+.accordion{
+    --bs-accordion-bg: #f2ede5;
+    --bs-accordion-color: #685c4a;
+    --bs-accordion-btn-color: #15616D;
+    --bs-accordion-border-color: #f2ede5;
+    --bs-accordion-active-bg: #c1af94;
+    --bs-accordion-active-color: #f2ede5;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-font-size: 100px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size:15px;
+    
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+    transition: all 0.5s;
+  }
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
+
+.icon-link{
+    width: 65px;
+}
+
 /* ----------------- ID CSS ----------------- */
 
 #title{
     font-size: 25px;
-    color:#cfc1ac;
+    color:#083a41;
 }
 
 #info{
     color:#685c4a;
+}
+
+#icon{
+    width: 65px;
+    border: none;
+    transition: all 0.75s ease 50ms;
+}
+
+#step1{
+    font-size: 50px;
 }
 
 /* -----------------Underline Animation CSS -----------------*/
@@ -115,7 +152,11 @@
     display: inline-block;
     position: relative;
     color: #f2ede5;
-  }
+}
+
+#icon:hover{
+    transform: rotate(0.5turn);
+}
 
 .header-box:hover{
     background-color:#15616dc8;
@@ -180,5 +221,6 @@ header{
     mix-blend-mode: multiply;
     /*-webkit-transition: background-image 0.2s ease-in-out 1s 250ms;*/
     transition: background-color 1s ease 50ms;
-    padding: 50px;
+    padding: 75px;
 }
+
