@@ -126,6 +126,10 @@
     width: 65px;
 }
 
+.reference{
+    display: flex;
+    flex-wrap: wrap;
+}
 /* ----------------- ID CSS ----------------- */
 
 #title{
