@@ -132,8 +132,14 @@
     color:#083a41;
 }
 
-#info{
+#info, ul{
     color:#685c4a;
+}
+
+ul{
+    font-family: 'Fira Sans', sans-serif;
+    font-size:18px;
+    font-weight: 300;
 }
 
 #icon{
