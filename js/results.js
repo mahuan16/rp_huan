@@ -5,35 +5,37 @@ async function getData(){
     const data = await response.text();
 
     //console.log(data);
-    const strControl = [];
-    const strHalf = [];
-    const strFourth = [];
+    const strSmooth = [];
+    const strRough = [];
+    const rtsSmooth = [];
+    const rtsRough = [];
 
-    const rtsControl = [];
-    const rtsHalf = [];
-    const rtsFourth = [];
-
-    const table = data.split('\n')
+    const table = data.split('\n');
+    console.log(table);
     table.forEach(row => {
-        let bars = row.split(',');
+        const columns = row.split(',');
 
-        strControl.push(bars[0]);
-        strHalf.push(bars[1]);
-        strFourth.push(bars[2]);
+        strSmooth.push(columns[0]);
+        strRough.push(columns[1]);
 
-        rtsControl.push(bars[3]);
-        rtsHalf.push(bars[4]);
-        rtsFourth.push(bars[5]);
+        rtsSmooth.push(columns[2]);
+        rtsRough.push(columns[3]);
     });
 
-    //console.log(strControl);
-    return {strControl,strHalf,strFourth,rtsControl,rtsHalf,rtsFourth}
+    console.log(strSmooth);
+    return {strSmooth, strRough, rtsSmooth, rtsRough}
 }
 
 /**
  * const table = data.split('\n')
  * table.forEach(row => {
  * let bars = row.split(',');
+ * 
+ * strSmooth.push(bars[0]);
+ * strControl.push(bars[1]);
+ * 
+ * rtsSmooth.push(bars[2]);
+ * rtsControl.push(bars[3]);
  * 
  * strControl.push(bars[0]);
  * strHalf.push(bars[1]);
@@ -58,30 +60,21 @@ async function createChart(){
             labels: ['Control','1/2 Group','1/4 Group'],
             datasets: [
             {
-                label:['Smooth Side','Rough Side'],
-                data: data.strControl,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
+                label:'Smooth Side',
+                data: data.strSmooth,
+                backgroundColor: 'rgba(20, 40, 225, 0.56)',
+                borderColor: 'rgba(20, 40, 225, 1)',
                 borderWidth: 1
             },
             {
-                label:['Smooth Side','Rough Side'],
-                data: data.strHalf,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
-                borderWidth: 1
-            },
-            {
-                label:['Smooth Side','Rough Side'],
-                data: data.strFourth,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
+                label:'Rough Side',
+                data: data.strRough,
+                backgroundColor: 'rgba(251, 153, 0, 0.56)',
+                borderColor: 'rgba(251, 153, 0, 1)',
                 borderWidth: 1
             }
         ]
         }, options: {
-            responsive: true,
-            maintainAspectRatio: false,
             scales: {
                 x: {
                     title: {
@@ -113,7 +106,8 @@ async function createChart(){
                     },
                     grid: {
                         color: '#98a1ab'
-                    }
+                    },
+                    max: 12
                 }
             },
             plugins:{
@@ -130,7 +124,7 @@ async function createChart(){
                     }
                 },
                 legend: {
-                    align: 'start',
+                    align: 'center',
                     position: 'bottom'
                 }
             }
@@ -143,27 +137,21 @@ async function createChart(){
             labels: ['Control','1/2 Group','1/4 Group'],
             datasets: [
             {
-                data: data.rtsControl,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
+                label:'Smooth Side',
+                data: data.rtsSmooth,
+                backgroundColor: 'rgba(20, 40, 225, 0.56)',
+                borderColor: 'rgba(20, 40, 225, 1)',
                 borderWidth: 1
             },
             {
-                data: data.rtsHalf,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
-                borderWidth: 1
-            },
-            {
-                data: data.rtsFourth,
-                backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
-                borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
+                label:'Rough Side',
+                data: data.rtsRough,
+                backgroundColor: 'rgba(251, 153, 0, 0.56)',
+                borderColor: 'rgba(251, 153, 0, 1)',
                 borderWidth: 1
             }
         ]
         }, options: {
-            responsive: true,
-            maintainAspectRatio: false,
             scales: {
                 x: {
                     title: {
@@ -171,11 +159,6 @@ async function createChart(){
                         text: 'Group',
                         font: {
                             size: 14
-                        }
-                    },
-                    ticks: {
-                        callback: function(val, index){
-                            return index%1 === 0? this.getLabelForValue(val) : ''
                         }
                     },
                     font: {
@@ -200,7 +183,8 @@ async function createChart(){
                     },
                     grid: {
                         color: '#98a1ab'
-                    }
+                    },
+                    max: 12
                 }
             },
             plugins:{
@@ -217,7 +201,7 @@ async function createChart(){
                     }
                 },
                 legend: {
-                    align: 'start',
+                    align: 'center',
                     position: 'bottom'
                 }
             }
