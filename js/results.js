@@ -1,9 +1,10 @@
 
 
 async function getData(){
-    const response = await fetch();
+    const response = await fetch('../data/data.csv');
     const data = await response.text();
 
+    //console.log(data);
     const strControl = [];
     const strHalf = [];
     const strFourth = [];
@@ -25,6 +26,7 @@ async function getData(){
         rtsFourth.push(bars[5]);
     });
 
+    //console.log(strControl);
     return {strControl,strHalf,strFourth,rtsControl,rtsHalf,rtsFourth}
 }
 
@@ -63,12 +65,14 @@ async function createChart(){
                 borderWidth: 1
             },
             {
+                label:['Smooth Side','Rough Side'],
                 data: data.strHalf,
                 backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
                 borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
                 borderWidth: 1
             },
             {
+                label:['Smooth Side','Rough Side'],
                 data: data.strFourth,
                 backgroundColor: ['rgba(20, 40, 225, 0.56)', 'rgba(251, 153, 0, 0.56)'],
                 borderColor: ['rgba(20, 40, 225, 1)', 'rgba(251, 153, 0, 1)'],
@@ -85,11 +89,6 @@ async function createChart(){
                         text: 'Group',
                         font: {
                             size: 14
-                        }
-                    },
-                    ticks: {
-                        callback: function(val, index){
-                            return index%1 === 0? this.getLabelForValue(val) : ''
                         }
                     },
                     font: {
@@ -225,3 +224,5 @@ async function createChart(){
         }
     });
 }
+
+createChart();
