@@ -11,12 +11,8 @@
     color:#15616D;
 }
 
-.authors{
+.authors, .results-bg{
     background-color:#f2ede5;
-}
-
-.rough-to-smooth{
-    padding-top: 50px;
 }
 
 .navbar{
@@ -103,7 +99,6 @@
     margin-bottom: 25px;
 }
 
-
 .accordion{
     --bs-accordion-bg: #f2ede5;
     --bs-accordion-color: #685c4a;
@@ -139,6 +134,18 @@
 
 #info, ul{
     color:#685c4a;
+}
+
+#chart-wrapper{
+    margin: auto;
+    padding: 10px;
+    /* If nesting a chart's container within another container, remove the 
+       height and width values.  The outer container will control the dimensions */ 
+    height: 40vh; 
+    width:  80vw;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;  
 }
 
 ul{

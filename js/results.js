@@ -26,33 +26,14 @@ async function getData(){
     return {strSmooth, strRough, rtsSmooth, rtsRough}
 }
 
-/**
- * const table = data.split('\n')
- * table.forEach(row => {
- * let bars = row.split(',');
- * 
- * strSmooth.push(bars[0]);
- * strControl.push(bars[1]);
- * 
- * rtsSmooth.push(bars[2]);
- * rtsControl.push(bars[3]);
- * 
- * strControl.push(bars[0]);
- * strHalf.push(bars[1]);
- * strFourth.push(bars[2]);
- * 
- * rtsControl.push(bars[3]);
- * rtsHalf.push(bars[4]);
- * rtsFourth.push(bars[5]);
- * })
- *
- * 
- */
 
 async function createChart(){
     const data = await getData();
     const barChartSmooth = document.getElementById('smoothToRough');
     const barChartRough = document.getElementById('roughToSmooth');
+
+    Chart.defaults.font.family = 'Fira Sans';
+    Chart.defaults.color = '#685c4a';
 
     const sToR = new Chart(barChartSmooth, {
         type: 'bar',
@@ -117,7 +98,7 @@ async function createChart(){
                     font: {
                         size: 24
                     },
-                    color: '#333333',
+                    color: '#15616D',
                     padding: {
                         top: 10,
                         bottom: 30
@@ -194,7 +175,7 @@ async function createChart(){
                     font: {
                         size: 24
                     },
-                    color: '#333333',
+                    color: '#15616D',
                     padding: {
                         top: 10,
                         bottom: 30
